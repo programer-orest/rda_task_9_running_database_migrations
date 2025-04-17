@@ -47,8 +47,8 @@ CREATE TABLE Users (
     Email VARCHAR(50),
     PRIMARY KEY (ID)
 );
---rollback DROP TABLE USERS;
+--rollback DROP TABLE Users;
 
 --changeset mate.acamemy:6 labels:0.0.3
-CREATE INDEX idx_email ON Users (Email);
---rollback DROP INDEX idx_email ON USERS;
+CREATE INDEX EmailIndex ON Users (Email);
+--rollback DROP INDEX EmailIndex ON Users;
